@@ -7,8 +7,8 @@ import { generateColor } from "../util/colorGenerator";
 
 const useStyles = makeStyles({
     rootButton: {
-        width: "200px",
-        height: "200px",
+        width: "250px",
+        height: "250px",
     },
 });
 
@@ -26,7 +26,7 @@ const ColorBlock: React.FC<ColorBlockProps> = ({ index, color }) => {
     };
 
     return (
-        <Box width={200} height={200}>
+        <Box width={250} height={250}>
             <Paper variant="outlined" elevation={1}>
                 <Box bgcolor={color}>
                     <Button

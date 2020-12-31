@@ -25,7 +25,7 @@ const Border = () => {
             justifyContent="center"
             alignItems="center"
         >
-            <Box width={600}>
+            <Box width={750}>
                 <Grid container>
                     {border.map((color, index) => (
                         <Grid key={Date.now() + index} item xs={4}>
