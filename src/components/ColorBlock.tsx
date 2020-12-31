@@ -1,5 +1,9 @@
 import { Box, Button, makeStyles, Paper } from "@material-ui/core";
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import FireBase from "../firebase";
+import { ChangeColor } from "../redux/actions";
+import { generateColor } from "../util/colorGenerator";
 
 const useStyles = makeStyles({
     rootButton: {
@@ -7,15 +11,18 @@ const useStyles = makeStyles({
         height: "300px",
     },
 });
-const ColorBlock = () => {
-    const classes = useStyles();
 
-    const [color, setColor] = useState(
-        `#${Math.floor(Math.random() * 16777215).toString(16)}`
-    );
+interface ColorBlockProps {
+    index: number;
+    color: string;
+}
+
+const ColorBlock: React.FC<ColorBlockProps> = ({ index, color }) => {
+    const classes = useStyles();
+    const dispatch = useDispatch();
 
     const handleClick = () => {
-        setColor(`#${Math.floor(Math.random() * 16777215).toString(16)}`);
+        dispatch(ChangeColor(generateColor(), index));
     };
 
     return (

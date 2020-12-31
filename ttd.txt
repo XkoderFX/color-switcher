@@ -1,0 +1,15 @@
+what we need:
+
+1) random color (HEX) generator
+2) generate board with random colors and save that in firebase
+
+stack: 
+	react + ts + firebase + redux
+	
+firebase: 
+	real-time database
+	
+
+
+
+

@@ -1,0 +1,4 @@
+export enum TYPES {
+    CHANGE_COLOR = "CHANGE_COLOR",
+    FETCH_COLORS = "FETCH_COLORS",
+}
